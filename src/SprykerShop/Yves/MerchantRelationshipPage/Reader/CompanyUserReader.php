@@ -18,9 +18,6 @@ class CompanyUserReader implements CompanyUserReaderInterface
      */
     protected MerchantRelationshipPageToCompanyUserClientInterface $companyUserClient;
 
-    /**
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToCompanyUserClientInterface $companyUserClient
-     */
     public function __construct(MerchantRelationshipPageToCompanyUserClientInterface $companyUserClient)
     {
         $this->companyUserClient = $companyUserClient;

@@ -25,11 +25,6 @@ class DetailController extends AbstractController
      */
     protected const REQUEST_PARAM_ID_MERCHANT_RELATIONSHIP = 'id-merchant-relationship';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Spryker\Yves\Kernel\View\View
-     */
     public function indexAction(Request $request): View
     {
         return $this->view(
@@ -81,11 +76,6 @@ class DetailController extends AbstractController
         ];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantStorageTransfer $merchantStorageTransfer
-     *
-     * @return string|null
-     */
     protected function findMerchantUrlForCurrentLocale(MerchantStorageTransfer $merchantStorageTransfer): ?string
     {
         $currentLocaleName = $this->getLocale();

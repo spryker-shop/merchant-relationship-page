@@ -17,11 +17,6 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class TableController extends AbstractController
 {
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Spryker\Yves\Kernel\View\View
-     */
     public function indexAction(Request $request): View
     {
         return $this->view(

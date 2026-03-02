@@ -43,9 +43,6 @@ class MerchantSearchReader implements MerchantSearchReaderInterface
      */
     protected MerchantRelationshipPageToMerchantSearchClientInterface $merchantSearchClient;
 
-    /**
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToMerchantSearchClientInterface $merchantSearchClient
-     */
     public function __construct(MerchantRelationshipPageToMerchantSearchClientInterface $merchantSearchClient)
     {
         $this->merchantSearchClient = $merchantSearchClient;
@@ -73,11 +70,6 @@ class MerchantSearchReader implements MerchantSearchReaderInterface
         return $indexedMerchantSearchTransfers;
     }
 
-    /**
-     * @param int $offset
-     *
-     * @return \Generated\Shared\Transfer\MerchantSearchRequestTransfer
-     */
     protected function createMerchantSearchRequest(int $offset): MerchantSearchRequestTransfer
     {
         return (new MerchantSearchRequestTransfer())->setRequestParameters([

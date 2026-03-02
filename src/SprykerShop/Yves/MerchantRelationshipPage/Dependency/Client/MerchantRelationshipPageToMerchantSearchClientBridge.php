@@ -24,11 +24,6 @@ class MerchantRelationshipPageToMerchantSearchClientBridge implements MerchantRe
         $this->merchantSearchClient = $merchantSearchClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantSearchRequestTransfer $merchantSearchRequestTransfer
-     *
-     * @return mixed
-     */
     public function search(MerchantSearchRequestTransfer $merchantSearchRequestTransfer): mixed
     {
         return $this->merchantSearchClient->search($merchantSearchRequestTransfer);

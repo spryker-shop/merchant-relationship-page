@@ -42,11 +42,6 @@ class MerchantRelationshipPageDependencyProvider extends AbstractBundleDependenc
      */
     public const CLIENT_MERCHANT_SEARCH = 'CLIENT_MERCHANT_SEARCH';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -59,11 +54,6 @@ class MerchantRelationshipPageDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addMerchantRelationshipClient(Container $container): Container
     {
         $container->set(static::CLIENT_MERCHANT_RELATIONSHIP, function (Container $container) {
@@ -75,11 +65,6 @@ class MerchantRelationshipPageDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCompanyUserClient(Container $container): Container
     {
         $container->set(static::CLIENT_COMPANY_USER, function (Container $container) {
@@ -91,11 +76,6 @@ class MerchantRelationshipPageDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCompanyBusinessUnitClient(Container $container): Container
     {
         $container->set(static::CLIENT_COMPANY_BUSINESS_UNIT, function (Container $container) {
@@ -107,11 +87,6 @@ class MerchantRelationshipPageDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addMerchantStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_MERCHANT_STORAGE, function (Container $container) {
@@ -123,11 +98,6 @@ class MerchantRelationshipPageDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addMerchantSearchClient(Container $container): Container
     {
         $container->set(static::CLIENT_MERCHANT_SEARCH, function (Container $container) {

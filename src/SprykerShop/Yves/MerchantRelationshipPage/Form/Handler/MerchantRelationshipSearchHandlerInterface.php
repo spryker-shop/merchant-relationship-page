@@ -13,12 +13,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 interface MerchantRelationshipSearchHandlerInterface
 {
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Symfony\Component\Form\FormInterface $merchantRelationshipSearchForm
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer
-     */
     public function handleSearchFormSubmit(
         Request $request,
         FormInterface $merchantRelationshipSearchForm

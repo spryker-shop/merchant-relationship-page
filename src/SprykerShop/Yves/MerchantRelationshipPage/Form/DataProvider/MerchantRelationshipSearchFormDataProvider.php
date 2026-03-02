@@ -35,12 +35,6 @@ class MerchantRelationshipSearchFormDataProvider
      */
     protected MerchantRelationshipPageConfig $merchantRelationshipPageConfig;
 
-    /**
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Reader\MerchantSearchReaderInterface $merchantSearchReader
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Reader\CompanyBusinessUnitReaderInterface $companyBusinessUnitReader
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Reader\CompanyUserReaderInterface $companyUserReader
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\MerchantRelationshipPageConfig $merchantRelationshipPageConfig
-     */
     public function __construct(
         MerchantSearchReaderInterface $merchantSearchReader,
         CompanyBusinessUnitReaderInterface $companyBusinessUnitReader,

@@ -34,9 +34,6 @@ use Symfony\Component\Form\FormInterface;
  */
 class MerchantRelationshipPageFactory extends AbstractFactory
 {
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function getMerchantRelationshipSearchForm(): FormInterface
     {
         return $this->getFormFactory()->create(
@@ -46,9 +43,6 @@ class MerchantRelationshipPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Form\DataProvider\MerchantRelationshipSearchFormDataProvider
-     */
     public function createMerchantRelationshipSearchFormDataProvider(): MerchantRelationshipSearchFormDataProvider
     {
         return new MerchantRelationshipSearchFormDataProvider(
@@ -59,9 +53,6 @@ class MerchantRelationshipPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Form\Handler\MerchantRelationshipSearchHandlerInterface
-     */
     public function createMerchantRelationshipSearchHandler(): MerchantRelationshipSearchHandlerInterface
     {
         return new MerchantRelationshipSearchHandler(
@@ -70,9 +61,6 @@ class MerchantRelationshipPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Reader\MerchantStorageReaderInterface
-     */
     public function createMerchantStorageReader(): MerchantStorageReaderInterface
     {
         return new MerchantStorageReader(
@@ -80,9 +68,6 @@ class MerchantRelationshipPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Reader\CompanyBusinessUnitReaderInterface
-     */
     public function createCompanyBusinessUnitReader(): CompanyBusinessUnitReaderInterface
     {
         return new CompanyBusinessUnitReader(
@@ -90,9 +75,6 @@ class MerchantRelationshipPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Reader\MerchantSearchReaderInterface
-     */
     public function createMerchantSearchReader(): MerchantSearchReaderInterface
     {
         return new MerchantSearchReader(
@@ -100,9 +82,6 @@ class MerchantRelationshipPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Reader\CompanyUserReaderInterface
-     */
     public function createCompanyUserReader(): CompanyUserReaderInterface
     {
         return new CompanyUserReader(
@@ -110,49 +89,31 @@ class MerchantRelationshipPageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormFactoryInterface
-     */
     public function getFormFactory(): FormFactoryInterface
     {
         return $this->getProvidedDependency(ApplicationConstants::FORM_FACTORY);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToMerchantRelationshipClientInterface
-     */
     public function getMerchantRelationshipClient(): MerchantRelationshipPageToMerchantRelationshipClientInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipPageDependencyProvider::CLIENT_MERCHANT_RELATIONSHIP);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToCompanyUserClientInterface
-     */
     public function getCompanyUserClient(): MerchantRelationshipPageToCompanyUserClientInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipPageDependencyProvider::CLIENT_COMPANY_USER);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToCompanyBusinessUnitClientInterface
-     */
     public function getCompanyBusinessUnitClient(): MerchantRelationshipPageToCompanyBusinessUnitClientInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipPageDependencyProvider::CLIENT_COMPANY_BUSINESS_UNIT);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToMerchantStorageClientInterface
-     */
     public function getMerchantStorageClient(): MerchantRelationshipPageToMerchantStorageClientInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipPageDependencyProvider::CLIENT_MERCHANT_STORAGE);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToMerchantSearchClientInterface
-     */
     public function getMerchantSearchClient(): MerchantRelationshipPageToMerchantSearchClientInterface
     {
         return $this->getProvidedDependency(MerchantRelationshipPageDependencyProvider::CLIENT_MERCHANT_SEARCH);

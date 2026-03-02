@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\MerchantSearchRequestTransfer;
 
 interface MerchantRelationshipPageToMerchantSearchClientInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantSearchRequestTransfer $merchantSearchRequestTransfer
-     *
-     * @return mixed
-     */
     public function search(MerchantSearchRequestTransfer $merchantSearchRequestTransfer): mixed;
 }

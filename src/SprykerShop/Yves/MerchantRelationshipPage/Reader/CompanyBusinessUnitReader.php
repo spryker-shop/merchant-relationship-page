@@ -17,9 +17,6 @@ class CompanyBusinessUnitReader implements CompanyBusinessUnitReaderInterface
      */
     protected MerchantRelationshipPageToCompanyBusinessUnitClientInterface $companyBusinessUnitClient;
 
-    /**
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToCompanyBusinessUnitClientInterface $companyBusinessUnitClient
-     */
     public function __construct(
         MerchantRelationshipPageToCompanyBusinessUnitClientInterface $companyBusinessUnitClient
     ) {

@@ -34,10 +34,6 @@ class MerchantRelationshipSearchHandler implements MerchantRelationshipSearchHan
      */
     protected CompanyUserReaderInterface $companyUserReader;
 
-    /**
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToMerchantRelationshipClientInterface $merchantRelationshipClient
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Reader\CompanyUserReaderInterface $companyUserReader
-     */
     public function __construct(
         MerchantRelationshipPageToMerchantRelationshipClientInterface $merchantRelationshipClient,
         CompanyUserReaderInterface $companyUserReader
@@ -46,12 +42,6 @@ class MerchantRelationshipSearchHandler implements MerchantRelationshipSearchHan
         $this->companyUserReader = $companyUserReader;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Symfony\Component\Form\FormInterface $merchantRelationshipSearchForm
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer
-     */
     public function handleSearchFormSubmit(
         Request $request,
         FormInterface $merchantRelationshipSearchForm
@@ -79,11 +69,6 @@ class MerchantRelationshipSearchHandler implements MerchantRelationshipSearchHan
         return $this->merchantRelationshipClient->getMerchantRelationshipCollection($merchantRelationshipCriteriaTransfer);
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer
-     */
     protected function getMerchantRelationshipCriteriaTransfer(Request $request): MerchantRelationshipCriteriaTransfer
     {
         $merchantRelationshipConditionsTransfer = (new MerchantRelationshipConditionsTransfer())
@@ -130,11 +115,6 @@ class MerchantRelationshipSearchHandler implements MerchantRelationshipSearchHan
         return $merchantRelationshipCriteriaTransfer;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Generated\Shared\Transfer\PaginationTransfer
-     */
     protected function getPaginationTransfer(Request $request): PaginationTransfer
     {
         return (new PaginationTransfer())

@@ -18,19 +18,11 @@ class MerchantStorageReader implements MerchantStorageReaderInterface
      */
     protected MerchantRelationshipPageToMerchantStorageClientInterface $merchantStorageClient;
 
-    /**
-     * @param \SprykerShop\Yves\MerchantRelationshipPage\Dependency\Client\MerchantRelationshipPageToMerchantStorageClientInterface $merchantStorageClient
-     */
     public function __construct(MerchantRelationshipPageToMerchantStorageClientInterface $merchantStorageClient)
     {
         $this->merchantStorageClient = $merchantStorageClient;
     }
 
-    /**
-     * @param int $idMerchant
-     *
-     * @return \Generated\Shared\Transfer\MerchantStorageTransfer|null
-     */
     public function findMerchantByIdMerchant(int $idMerchant): ?MerchantStorageTransfer
     {
         $merchantStorageCriteriaTransfer = (new MerchantStorageCriteriaTransfer())
